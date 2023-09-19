@@ -1,15 +1,15 @@
 public class Polynomial {
     double[] coefficients;
 
-    Polynomial(){
+    public Polynomial(){
         this.coefficients = new double[0];
     }
 
-    Polynomial(double[] coefficients){
+    public Polynomial(double[] coefficients){
         this.coefficients = coefficients;
     }
 
-    Polynomial add(Polynomial polynomialToAdd){
+    public Polynomial add(Polynomial polynomialToAdd){
         double[] polynomialCo1 = this.coefficients;
         double[] polynomialCo2 = polynomialToAdd.coefficients;
 
@@ -34,7 +34,7 @@ public class Polynomial {
         return new Polynomial(added);
     }
 
-    Double evaluate(double x){
+    public Double evaluate(double x){
         double[] coefficients = this.coefficients;
         double result = 0;
         for(int i = 0; i < coefficients.length; i++){
@@ -43,7 +43,7 @@ public class Polynomial {
         return result;
     }
 
-    boolean hasRoot(double x){
+    public boolean hasRoot(double x){
         return evaluate(x) == 0;
     }
 
