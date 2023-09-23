@@ -2,7 +2,7 @@ public class Polynomial {
     double[] coefficients;
 
     public Polynomial(){
-        this.coefficients = new double[0];
+        this.coefficients = new double[]{0};
     }
 
     public Polynomial(double[] coefficients){
